@@ -132,4 +132,6 @@ public class Job {
     public void setCoreCompetency(CoreCompetency value) {
         this.coreCompetency = value;
     }
+
+
 }

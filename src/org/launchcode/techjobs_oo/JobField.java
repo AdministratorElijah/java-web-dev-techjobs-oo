@@ -2,10 +2,10 @@ package org.launchcode.techjobs_oo;
 
 import java.util.Objects;
 
-public abstract class JobField {
-    protected int id;
-    protected static int nextId = 1;
-    protected String value;
+public abstract class JobField<id> {
+    private int id;
+    private static int nextId = 1;
+    private String value;
 
     public JobField() {
         id = nextId;
@@ -25,7 +25,7 @@ public abstract class JobField {
     }
 
     @Override
-    public boolean equals(Object o) {  // Two objects are equal if they have the same id.
+    public boolean equals(Object o) {                  // Two objects are equal if they have the same id.
         if (this == o) return true;
         if (!(o instanceof JobField)) return false;
         JobField jobField = (JobField) o;
